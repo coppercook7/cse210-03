@@ -1,8 +1,7 @@
-# 
-
+import random
 
 # Add the class Puzzle:
-
+class Puzzle:
 
 #Kwadjo
 #   Add the  Attribute with the following - _words = [
@@ -17,6 +16,11 @@
 
 #Cooper
 #      _chosen_word = _words[random.randint[0, 11]]
+
+        # Might be easier to do  self._chosen_word = random.choice(self._words)
+        # I believe this will just select a word from the list without needing 
+        # to know the range. (Jeremy)
+
         """This will randomly choose a word from the list using random"""
 
 #Bryan
