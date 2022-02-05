@@ -15,6 +15,7 @@
     - _output()
 
 
+
     ----- Puzzle -----
 
     Attributes:
@@ -22,12 +23,18 @@
         'bottle', 'moving', 'outfit', 'wealth', 'latest', 'valley',
         'height', 'adjust', 'powder', 'retire', 'palace', 'marine'
         ]
-    - _hide_word = ['_ ','_ ','_ ','_ ','_ ','_']
-    - _chosen_word = _words[random.randint[0, 11]]
+    - _chosen_word = random.choice(_words)
+    - _blank_word = ['_', ' _', ' _', ' _', ' _', ' _']
     - _guess = ''
 
     Methods:
-    - replace_blank()
+    + get_blank(_blank_word)
+        *to print the blank list
+    + check_guess()
+        *if _guess (the letter) is in _chosen_word:
+            replace the index of _blank with the same index of the letter in _chosen_word
+        else:
+            return a false to delete line from Skydiver
 
 
     ----- Skydiver -----
@@ -36,8 +43,11 @@
     - _parachute_guy = [' _____', '/_____\\', '\     /', ' \   /', '   O',   /|\\]
 
     Methods:
-    - get_skydiver()
+    - get_skydiver(_parachute_guy)
     - kill_skydiver()
+        *If too much attempts made, replace O with x
+        *Kill the parachute guy and return a False to end game
+
 
 
     ----- TerminalService -----
@@ -46,5 +56,5 @@
     No
 
     Methods:
-    - read_text()
-    - write_list()
+    - read_text(input_prompt)
+    - write_list(list of strings)
