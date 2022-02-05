@@ -30,3 +30,4 @@ class Puzzle:
 #Bryan
 #     - Add method replace_blank()
         """Based on the input user it will check to see if the letter is in the word."""
+        """If Guess is in _chosen_word then replace the blank with the correct letter. Perhaps also set a state variable to indicate the guess was correct or return true"""
