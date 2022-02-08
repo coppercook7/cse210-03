@@ -2,11 +2,12 @@
 
 # Create the class Skydiver:
 class Skydiver:
-
-#Erin
-#     Add the following attribute with the following- _parachute_guy = [' _____', '/_____\\', '\     /', ' \   /', '   O',   /|\\]
-    """List to define each line of the skydiver"""
-#     
+    def __init__(self):
+#Erin       
+    
+        self._parachute_guy = [' _____', '/_____\\', '\     /', ' \   /', '   O',  '  /|\\', '  / \ ', '', '^^^^^^^']
+        """List to define each line of the skydiver"""
+   
 
 #Joe
 #    Create method get_skydiver()
