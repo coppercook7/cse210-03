@@ -24,9 +24,16 @@ class Puzzle:
         """This will randomly choose a word from the list using random"""
 
 #Bryan
-#      _guess = ''
-        """Setting a blank value for the guess"""
+        _guess = ''
+        #Setting a blank value for the guess
+
+        def guess_is_correct(self, letterGuessIn): #Returns true if the letterGuessIn is in the chosen word
+                return (letterGuessIn in self._chosen_word)
+
 
 #Bryan
-#     - Add method replace_blank()
-        """Based on the input user it will check to see if the letter is in the word."""
+        def replace_blank(self, letterGuessIn): #Replace all the letters that match the letter guess in the _hide_word
+                self._indices = [_index for _index in range(len(_chosen_word)) if _chosen_word.startswith(letterGuessIn, _index)] #find the index of each matching letter.
+                for _index in self._indices: #replace all the '_' in _hide_word with the guessed letter.
+                        _hide_word[_index]=letterGuessIn 
+                return _hide_word #Return the updated _hide_word with letters added.
