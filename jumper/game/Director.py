@@ -1,33 +1,29 @@
-from game.terminalservice import Terminal_Service
+from game.terminalservice import TerminalService
 from game.skydiver import Skydiver
 from game.puzzle import Puzzle
 
 # Create a class called "Director".
 class Director:
-
     """A person who directs the game. 
     
     The responsibility of a Director is to control the sequence of play.
 
     Attributes:
-        puzzle (Puzzle): The game's _puzzle.
         is_playing (boolean): Whether or not to keep playing.
+        puzzle (Puzzle): The game's puzzle.
         skydiver (Skydiver): The game's skydiver.
         terminal_service: For getting and displaying information on the terminal.
     """
 
     def __init__(self):
-    # Define new attributes "_puzzle", "_is_playing", "_skydiver", "_terminal_service"
-        self._puzzle = Puzzle
         self._is_playing = True
-        self._skydiver = Skydiver
-        self._terminal_service = Terminal_Service()
+        self._puzzle = Puzzle()   
+        self._skydiver = Skydiver()
+        self._terminal_service = TerminalService()
         """Args:
             self (Director): an instance of Director.
         """
 
-
-    # Define a start_game() with the below
     def start_game(self):
         """Starts the game by running the main game loop. Use a while
         loop to check if the game has ended and if so, to ask the user
@@ -35,17 +31,18 @@ class Director:
         
         Args:
             self (Director): an instance of Director."""
+        while self._is_playing:
+            self._get_inputs()
+            self._do_updates()
+            self._do_outputs()
 
-
-    #- _do_inputs()
     def _get_inputs(self):
         """Get the guessed letter from player.
 
         Args:
             self (Director): An instance of Director."""
+        guess = self._terminal_service.read_text("Guess a letter [a-z]: ")
 
-
-    #- _do_updates()
     def _do_updates(self):
         """Keeps track of player guess.
         
@@ -53,8 +50,6 @@ class Director:
             self (Director): An instance of Director.
         """
 
-
-    #- _do_output()
     def _do_outputs(self):
         """Update puzzle displayed.
         
