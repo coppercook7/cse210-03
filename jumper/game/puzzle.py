@@ -4,18 +4,15 @@ import random
 class Puzzle:
 
 #Kwadjo
-#   Add the  Attribute with the following - _words = [
-#         'bottle', 'moving', 'outfit', 'wealth', 'latest', 'valley',
-#         'height', 'adjust', 'powder', 'retire', 'palace', 'marine'
-#         ]
+        _words = ['bottle', 'moving', 'outfit', 'wealth', 'latest', 'valley','height', 'adjust', 'powder', 'retire', 'palace', 'marine']
         """This will be the dictionary that defines the word to be used with the game using random."""
 
 #Cooper
-#      _hide_word = ['_ ','_ ','_ ','_ ','_ ','_']
+        _hide_word = ['_ ','_ ','_ ','_ ','_ ','_']
         """This will replace the current letter with a line until the user correctly guesses the letter"""
 
 #Cooper
-#      _chosen_word = _words[random.randint[0, 11]]
+        _chosen_word = _words[random.randint[0, 11]]
 
         # Might be easier to do  self._chosen_word = random.choice(self._words)
         # I believe this will just select a word from the list without needing 
@@ -33,7 +30,7 @@ class Puzzle:
 
 #Bryan
         def replace_blank(self, letterGuessIn): #Replace all the letters that match the letter guess in the _hide_word
-                self._indices = [_index for _index in range(len(_chosen_word)) if _chosen_word.startswith(letterGuessIn, _index)] #find the index of each matching letter.
+                self._indices = [_index for _index in range(len(self._chosen_word)) if self._chosen_word.startswith(letterGuessIn, _index)] #find the index of each matching letter.
                 for _index in self._indices: #replace all the '_' in _hide_word with the guessed letter.
-                        _hide_word[_index]=letterGuessIn 
-                return _hide_word #Return the updated _hide_word with letters added.
+                        self._hide_word[_index]=letterGuessIn 
+                return self._hide_word #Return the updated _hide_word with letters added.
