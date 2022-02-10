@@ -7,7 +7,6 @@ class Director:
     """A person who directs the game. 
     
     The responsibility of a Director is to control the sequence of play.
-
     Attributes:
         is_playing (boolean): Whether or not to keep playing.
         puzzle (Puzzle): The game's puzzle.
@@ -38,7 +37,6 @@ class Director:
 
     def _get_inputs(self):
         """Get the guessed letter from player.
-
         Args:
             self (Director): An instance of Director."""
         guess = self._terminal_service.read_text("Guess a letter [a-z]: ")

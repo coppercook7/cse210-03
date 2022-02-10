@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# cse210-03
-Test from Joe 2
-=======
 # Jumper
 ---
 Do think you're a lucky one? Play **Jumper** to try you're luck and use your spelling prowess to figure out the secret word of the puzzle. The rules are simple. You will guess which letters are present in the secret word. If you're guess is wrong, our friend the skydiver will slowly lose his parachute, ultimately sending him to his demise, ending the game. 
@@ -43,4 +39,3 @@ CSE 210 - TEAM H:
 * Erin Engler - eng20015@byui.edu
 * Kwadjo Quarshie - qua21016@byui.edu
 * Jeremy Shelby - jeremy_shelby@hotmail.com
->>>>>>> 2f843f7a1117b5ebaf5c31b314db1169ec5d3ddf
