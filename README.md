@@ -1,6 +1,6 @@
 # Jumper
 ---
-Do think you're a lucky one? Play <i>Jumper</i> to try you're luck and use your spelling prowess to figure out the secret word of the puzzle. The rules are simple. You will guess which letters are present in the secret word. If you're guess is wrong, our friend the skydiver will slowly lose his parachute, ultimately sending him to his demise, ending the game. 
+Do think you're a lucky one? Play **Jumper** to try you're luck and use your spelling prowess to figure out the secret word of the puzzle. The rules are simple. You will guess which letters are present in the secret word. If you're guess is wrong, our friend the skydiver will slowly lose his parachute, ultimately sending him to his demise, ending the game. 
 
 ## Getting Started
 ---
