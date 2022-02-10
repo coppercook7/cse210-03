@@ -1,5 +1,4 @@
-from importlib.resources import read_text
-from game.terminalservice import Terminal_Service
+from game.terminalservice import TerminalService
 from game.skydiver import Skydiver
 from game.puzzle import Puzzle
 
@@ -20,7 +19,7 @@ class Director:
         self._is_playing = True
         self._puzzle = Puzzle()   
         self._skydiver = Skydiver()
-        self._terminal_service = Terminal_Service()
+        self._terminal_service = TerminalService()
         """Args:
             self (Director): an instance of Director.
         """
