@@ -11,7 +11,7 @@ class Puzzle:
                 self._hide_word = ['_ ','_ ','_ ','_ ','_ ','_']
                 """This will replace the current letter with a line until the user correctly guesses the letter"""
 #Cooper
-                self._chosen_word = self._words[random.randint[0, 11]]
+                self._chosen_word = self._words[random.randint(0, 11)]
                 # Might be easier to do  self._chosen_word = random.choice(self._words)
                 # I believe this will just select a word from the list without needing 
                 # to know the range. (Jeremy)
