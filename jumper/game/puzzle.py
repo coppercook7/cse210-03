@@ -35,5 +35,5 @@ class Puzzle:
         def replace_blank(self, letterGuessIn): #Replace all the letters that match the letter guess in the _hide_word
                 self._indices = [_index for _index in range(len(self._chosen_word)) if self._chosen_word.startswith(letterGuessIn, _index)] #find the index of each matching letter.
                 for _index in self._indices: #replace all the '_' in _hide_word with the guessed letter.
-                        self._hide_word[_index]=letterGuessIn 
+                        self._hide_word[_index]=" " + letterGuessIn + " " 
                 return self._hide_word #Return the updated _hide_word with letters added.
