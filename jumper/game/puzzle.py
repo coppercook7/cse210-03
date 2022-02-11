@@ -18,7 +18,7 @@ class Puzzle:
 
                 """This will randomly choose a word from the list using random"""
 #Bryan
-                self._guess = ''
+                
                 #Setting a blank value for the guess
 
         def guess_is_correct(self, letterGuessIn): #Returns true if the letterGuessIn is in the chosen word

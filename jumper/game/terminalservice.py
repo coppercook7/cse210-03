@@ -23,8 +23,9 @@ class TerminalService:
             self (Terminal_Service): An instance of Terminal_Service.
             list (string): The text to display.
         """
-        for i in list[range:]:
-            print (i)
+        if range < 4:
+            for i in list[range:]:
+                print (i)
         
         else:
             list[4] = '  _x_'
@@ -32,3 +33,5 @@ class TerminalService:
             list[6] = '^^^^^^^'
             for i in list[range:-1]:
                 print(i)
+            
+             
