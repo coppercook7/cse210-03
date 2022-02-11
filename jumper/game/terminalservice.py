@@ -16,11 +16,19 @@ class TerminalService:
         return input(prompt)
 
 #Jeremy 
-    def write_list(self,list):
+    def write_list(self,list,range):
         """Display the given list on the terminal.
         
         Args:
             self (Terminal_Service): An instance of Terminal_Service.
             list (string): The text to display.
         """
-        print(list)
+        for i in list[range:]:
+            print (i)
+        
+        else:
+            list[4] = '  _x_'
+            list[5] = '  _|_'
+            list[6] = '^^^^^^^'
+            for i in list[range:-1]:
+                print(i)

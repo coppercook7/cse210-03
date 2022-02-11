@@ -41,7 +41,7 @@ class Director:
         """Get the guessed letter from player.
         Args:
             self (Director): An instance of Director."""
-        guess = self._terminal_service.read_text("Guess a letter [a-z]: ")
+        self._guess = self._terminal_service.read_text("Guess a letter [a-z]: ")
 
     def _do_updates(self):
         if self._puzzle.guess_is_correct:
@@ -57,6 +57,9 @@ class Director:
         """
 
     def _do_outputs(self):
+        self._terminal_service.write_list(self._skydiver.get_skydiver,self._skydiver._range)
+        self._puzzle._hide_word
+
         """Update puzzle displayed.
         
         Args:
