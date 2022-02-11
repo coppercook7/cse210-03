@@ -3,6 +3,11 @@ import random
 # Add the class Puzzle:
 class Puzzle:
 
+        def __init__(self): #Initialize the class
+                self._words = []
+                self._hide_word = []
+                self._chosen_word = ''
+
 #Kwadjo
         _words = ['bottle', 'moving', 'outfit', 'wealth', 'latest', 'valley','height', 'adjust', 'powder', 'retire', 'palace', 'marine']
         """This will be the dictionary that defines the word to be used with the game using random."""
