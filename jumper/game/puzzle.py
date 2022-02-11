@@ -4,30 +4,22 @@ import random
 class Puzzle:
 
         def __init__(self): #Initialize the class
-                self._words = []
-                self._hide_word = []
-                self._chosen_word = ''
-
 #Kwadjo
-        _words = ['bottle', 'moving', 'outfit', 'wealth', 'latest', 'valley','height', 'adjust', 'powder', 'retire', 'palace', 'marine']
-        """This will be the dictionary that defines the word to be used with the game using random."""
-
+                self._words = ['bottle', 'moving', 'outfit', 'wealth', 'latest', 'valley','height', 'adjust', 'powder', 'retire', 'palace', 'marine']
+                """This will be the dictionary that defines the word to be used with the game using random."""
 #Cooper
-        _hide_word = ['_ ','_ ','_ ','_ ','_ ','_']
-        """This will replace the current letter with a line until the user correctly guesses the letter"""
-
+                self._hide_word = ['_ ','_ ','_ ','_ ','_ ','_']
+                """This will replace the current letter with a line until the user correctly guesses the letter"""
 #Cooper
-        _chosen_word = _words[random.randint[0, 11]]
+                self._chosen_word = self._words[random.randint[0, 11]]
+                # Might be easier to do  self._chosen_word = random.choice(self._words)
+                # I believe this will just select a word from the list without needing 
+                # to know the range. (Jeremy)
 
-        # Might be easier to do  self._chosen_word = random.choice(self._words)
-        # I believe this will just select a word from the list without needing 
-        # to know the range. (Jeremy)
-
-        """This will randomly choose a word from the list using random"""
-
+                """This will randomly choose a word from the list using random"""
 #Bryan
-        _guess = ''
-        #Setting a blank value for the guess
+                self._guess = ''
+                #Setting a blank value for the guess
 
         def guess_is_correct(self, letterGuessIn): #Returns true if the letterGuessIn is in the chosen word
                 return (letterGuessIn in self._chosen_word)

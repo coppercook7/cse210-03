@@ -1,4 +1,4 @@
-from puzzle import Puzzle
+from .puzzle import Puzzle
 
 # Create the class Skydiver:
 class Skydiver:
