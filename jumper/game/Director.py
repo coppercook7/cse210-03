@@ -19,6 +19,8 @@ class Director:
         self._puzzle = Puzzle()   
         self._skydiver = Skydiver()
         self._terminal_service = TerminalService()
+        self._lives = 0
+        self._guess = ""
         """Args:
             self (Director): an instance of Director.
         """
@@ -42,6 +44,12 @@ class Director:
         guess = self._terminal_service.read_text("Guess a letter [a-z]: ")
 
     def _do_updates(self):
+        if self._puzzle.guess_is_correct:
+            self._puzzle.replace_blank(self._guess)
+
+        else:
+            self._lives + 1
+            self._skydiver.kill_skydiver(self._lives)
         """Keeps track of player guess.
         
         Args:

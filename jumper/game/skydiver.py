@@ -12,13 +12,24 @@ class Skydiver:
 #Joe
 #    Create method get_skydiver()
     def get_skydiver(self, range):
-        print(self._parachute_guy[range - self.lives])
+        for i in self._parachute_guy[range:]:
+            print (i)
+        
+        else:
+            self._parachute_guy[4] = '  _x_'
+            self._parachute_guy[5] = '  _|_'
+            self._parachute_guy[6] = '^^^^^^^'
+            for i in self._parachute_guy[range:-1]:
+                print(i)
 #Joe
 #    Create method kill_skydiver()
 
-    def kill_skydiver(self):
+    # def kill_skydiver(self):
         
-        if Puzzle.guess_is_correct == False:
-            new_lives = self.lives + 1
-            self.lives = new_lives
+    #     if Puzzle.guess_is_correct == False:
+    #         new_lives = self.lives + 1
+    #         self.lives = new_lives
 
+    def kill_skydiver(self,lives):
+        self.range = lives
+        
