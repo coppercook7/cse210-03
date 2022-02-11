@@ -32,10 +32,12 @@ class Director:
         
         Args:
             self (Director): an instance of Director."""
-        while self._is_playing:
+        while self._is_playing == True:
             self._get_inputs()
             self._do_updates()
             self._do_outputs()
+
+        print("Game over")
 
     def _get_inputs(self):
         """Get the guessed letter from player.
@@ -54,9 +56,13 @@ class Director:
             self._skydiver.kill_skydiver(self._lives)
 
             if self._lives < 4:
-                return self._is_playing == True
+                self._is_playing = True
             else:
-                return self._is_playing == False
+                self._is_playing = False
+
+
+
+            
             """Keeps track of player guess.
             
             Args:
@@ -66,7 +72,7 @@ class Director:
     def _do_outputs(self):
         self._terminal_service.write_list(self._skydiver.get_skydiver(),self._skydiver._range)
         # print(self._puzzle._hide_word)
-
+        self._terminal_service.hidden_word(self._puzzle.replace_blank(self._guess))
         """Update puzzle displayed.
         
         Args:

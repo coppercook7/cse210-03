@@ -33,5 +33,7 @@ class TerminalService:
             list[6] = '^^^^^^^'
             for i in list[range:-1]:
                 print(i)
-            
-             
+
+
+    def hidden_word(self, word):
+        print(''.join(word))
