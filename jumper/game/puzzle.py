@@ -22,7 +22,10 @@ class Puzzle:
                 #Setting a blank value for the guess
 
         def guess_is_correct(self, letterGuessIn): #Returns true if the letterGuessIn is in the chosen word
-                return (letterGuessIn in self._chosen_word)
+                if letterGuessIn in self._chosen_word:
+                        return True
+                else:
+                        return False
 
 
 #Bryan

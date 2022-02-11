@@ -42,28 +42,30 @@ class Director:
         Args:
             self (Director): An instance of Director."""
         self._guess = self._terminal_service.read_text("Guess a letter [a-z]: ")
+        return self._guess
+
 
     def _do_updates(self):
         if self._puzzle.guess_is_correct(self._guess) == True:
             self._puzzle.replace_blank(self._guess)
 
         else:
-            self._lives + 1
+            self._lives = self._lives+1
             self._skydiver.kill_skydiver(self._lives)
 
             if self._lives < 4:
-                self._is_playing = True
+                return self._is_playing == True
             else:
-                self._is_playing = False
-        """Keeps track of player guess.
-        
-        Args:
-            self (Director): An instance of Director.
-        """
+                return self._is_playing == False
+            """Keeps track of player guess.
+            
+            Args:
+                self (Director): An instance of Director.
+            """
 
     def _do_outputs(self):
         self._terminal_service.write_list(self._skydiver.get_skydiver(),self._skydiver._range)
-        self._puzzle._hide_word
+        # print(self._puzzle._hide_word)
 
         """Update puzzle displayed.
         
