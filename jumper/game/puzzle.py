@@ -37,3 +37,15 @@ class Puzzle:
                 for _index in self._indices: #replace all the '_' in _hide_word with the guessed letter.
                         self._hide_word[_index]=" " + letterGuessIn + " " 
                 return self._hide_word #Return the updated _hide_word with letters added.
+
+        def puzzle_complete(self):
+                chosen_word = []
+                for i in self._chosen_word:
+                   chosen_word.append(" " + i + " ")
+                # print(chosen_word)
+                # print(self._hide_word)
+                if self._hide_word == chosen_word:
+                        return True
+
+                else:
+                        return False       
