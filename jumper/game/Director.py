@@ -78,5 +78,14 @@ class Director:
         Args:
             self (Director): An instance of Director.
         """
+    
+    def game_over(self):
+        if self._words == self._chosen_word: #comparing the randomly selected word to the word we got right
+            self._is_playing = False #if guessed correctly, it should end the game
+            print ('You Win!')
+        else:
+            self._is_playing = True #if not the game continues
+            
+
 
     # It's working perfectly!!!
