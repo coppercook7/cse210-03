@@ -18,10 +18,6 @@ class Skydiver:
 
     # def kill_skydiver(self):
         
-    #     if Puzzle.guess_is_correct == False:
-    #         new_lives = self.lives + 1
-    #         self.lives = new_lives
-
     def kill_skydiver(self,lives):
         self._range = lives
         

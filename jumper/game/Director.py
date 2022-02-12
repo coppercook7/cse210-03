@@ -59,7 +59,6 @@ class Director:
         if self._puzzle.guess_is_correct(self._guess) == True:
             self._puzzle.replace_blank(self._guess)
             if self._puzzle.puzzle_complete() == True:
-                print("\nYou Win!!!\n")
                 self._is_playing = False
         else:
             self._lives = self._lives+1
@@ -81,12 +80,12 @@ class Director:
 
     def _do_outputs(self):
         self._terminal_service.write_list(self._skydiver.get_skydiver(),self._skydiver._range)
-        # print(self._puzzle._hide_word)
         self._terminal_service.hidden_word(self._puzzle.replace_blank(self._guess))
 
         if self._is_playing == False:
+
             if self._puzzle.puzzle_complete() == True:
-                self._terminal_service.game_over("You Win")
+                self._terminal_service.game_over(("You Win!!!"))
 
             else:
                 self._terminal_service.game_over("Better luck next time.")

@@ -37,3 +37,7 @@ class TerminalService:
 
     def hidden_word(self, word):
         print(''.join(word))
+
+    
+    def game_over(self, prompt):
+        print(prompt)
