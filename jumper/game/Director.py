@@ -21,6 +21,7 @@ class Director:
         self._terminal_service = TerminalService()
         self._lives = 0
         self._guess = ""
+        
         """Args:
             self (Director): an instance of Director.
         """
@@ -36,13 +37,13 @@ class Director:
             self._get_inputs()
             self._do_updates()
             self._do_outputs()
-            # self.game_over()
+            
 
-        if self._puzzle.puzzle_complete() == True:
-            print("You Win")
+        # if self._puzzle.puzzle_complete() == True:
+        #     self._terminal_service.game_over("You Win")
 
-        else:
-            print("Better luck next time.")
+        # else:
+        #     self._terminal_service.game_over("Better luck next time.")
 
     def _get_inputs(self):
         """Get the guessed letter from player.
@@ -82,20 +83,18 @@ class Director:
         self._terminal_service.write_list(self._skydiver.get_skydiver(),self._skydiver._range)
         # print(self._puzzle._hide_word)
         self._terminal_service.hidden_word(self._puzzle.replace_blank(self._guess))
+
+        if self._is_playing == False:
+            if self._puzzle.puzzle_complete() == True:
+                self._terminal_service.game_over("You Win")
+
+            else:
+                self._terminal_service.game_over("Better luck next time.")
+
         """Update puzzle displayed.
         
         Args:
             self (Director): An instance of Director.
         """
     
-    # def game_over(self):
-
-    #     if self._puzzle._hide_word == self._puzzle._chosen_word: #comparing the randomly selected word to the word we got right
-    #         self._is_playing = False #if guessed correctly, it should end the game
-    #         print ('You Win!')
-    #     else:
-    #         self._is_playing = True #if not the game continues
-            
-
-
     # It's working perfectly!!!
